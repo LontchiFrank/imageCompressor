@@ -61,18 +61,24 @@ function Upload() {
       {" "}
       <h1></h1>
       <Container>
-        <Grid>
+        <Grid className="d-flex">
           <Grid.Column width={6}>
             <Item>
               {origImageFile ? (
                 <Image src={origImageFile}></Image>
               ) : (
-                <Image src="http://navparivartan.in/wp-content/uploads/2018/11/placeholder.png"></Image>
+                <Image
+                  style={{ width: "500px", height: "300px" }}
+                  src="http://navparivartan.in/wp-content/uploads/2018/11/placeholder.png"
+                ></Image>
               )}
             </Item>
           </Grid.Column>
 
-          <Grid.Column width={4}>
+          <Grid.Column
+            width={4}
+            className="d-flex justify-content-center align-items-center flex-column"
+          >
             <input
               type="file"
               accept="image/*"
@@ -109,7 +115,10 @@ function Upload() {
           <Grid.Column width={6}>
             <Item>
               {compressedImage ? (
-                <Image src={compressedImage}></Image>
+                <Image
+                  style={{ width: "400px", height: "300px" }}
+                  src={compressedImage}
+                ></Image>
               ) : (
                 <Image src="http://navparivartan.in/wp-content/uploads/2018/11/placeholder.png"></Image>
               )}
